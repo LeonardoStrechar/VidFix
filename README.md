@@ -16,3 +16,21 @@ yarn add vidfix
 ```sh
 <VidFix videoPath="/videos/myvideo.mp4" />
 ```
+
+#
+## Or you can use the ugly solution
+
+```sh
+    <div dangerouslySetInnerHTML={{
+      __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+        >
+          <source src="${videoPath}" type="video/mp4"/>
+        </video>
+      `
+    }}/>
+```
